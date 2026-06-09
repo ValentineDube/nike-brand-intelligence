@@ -73,9 +73,14 @@ The full report includes a phased roadmap: **Immediate (0–30 days), Short-term
 
 | File | Description |
 |------|-------------|
+| `nike_brand_intelligence.Rmd` | **Full reproducible R source code** — every step from data loading to analysis |
 | `index.html` | Complete rendered report (interactive, self-contained) |
 | `README.md` | This overview |
 | `LICENSE` | MIT License |
+
+## 🔁 Reproducibility
+
+The entire analysis is reproducible from `nike_brand_intelligence.Rmd`. The pipeline ingests a raw multi-channel feedback corpus (Reddit, Nike.com, YouTube, social), cleans and tokenizes it, and runs the full suite of analyses end to end. Topic modeling uses a fixed seed (`set.seed(1234)`) for deterministic results, and analysis artifacts are exported to CSV for downstream use.
 
 ## 👀 How to View
 
