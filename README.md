@@ -1,70 +1,90 @@
-# Nike Brand Intelligence — Text Mining & Sentiment Analysis
+# Nike Brand Intelligence — Customer Voice Analytics
 
-> An end-to-end Natural Language Processing (NLP) project analyzing customer voice data to surface actionable brand, product, and competitive insights for Nike.
+> Turning **687 unstructured customer comments** across Nike.com, YouTube, Reddit, and social media into a board-ready strategic narrative — using NLP, sentiment analysis, and topic modeling in R.
 
 **📊 [View the full interactive report →](https://valentinedube.github.io/nike-brand-intelligence/)**
 
+![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
+![NLP](https://img.shields.io/badge/NLP-Text%20Mining-blue)
+![Sentiment Analysis](https://img.shields.io/badge/Sentiment-Bing%20%7C%20AFINN%20%7C%20NRC-green)
+![Topic Modeling](https://img.shields.io/badge/Topic%20Modeling-LDA-orange)
+
 ---
 
-## Overview
+## 🎯 The Business Question
 
-This project applies text-mining and sentiment-analysis techniques to unstructured customer feedback about Nike products. It transforms thousands of raw comments into a structured strategic narrative — identifying what customers love, what drives dissatisfaction, how products perform individually, and where Nike stands against its main competitor, Adidas.
+Nike's leadership (CMO & VP of Consumer Insights) observed rising online chatter about sustainability, mixed sentiment on pricing, and growing pressure from challenger brands. They needed one question answered:
 
-The analysis was built in **R** using the `tidytext` framework and delivered as a fully reproducible R Markdown report.
+> **"What are customers *really* saying about Nike — and how should we respond strategically?"**
 
-## Business Questions Addressed
+This project answers it with evidence, not opinion.
 
-- What are customers actually saying about Nike, and how does sentiment break down across emotions?
-- Which product lines drive positive vs. negative sentiment (e.g. the Metcon 10 training shoe)?
-- What recurring themes and aspects (fit, durability, sustainability, price) shape brand perception?
-- How does Nike compare to Adidas on share of voice and sentiment?
-- What strategic actions should Nike prioritize over the next 0–180 days?
+---
 
-## Methods & Techniques
+## 💡 Key Findings (What the Data Revealed)
+
+**Sentiment is winnable, not hostile** — of 687 comments: **32.9% positive, 47.3% neutral, 19.8% negative.** Most customers are persuadable; the neutral majority is the growth opportunity.
+
+**Comfort is Nike's strongest moat** — the #1 theme (96 mentions, 14% of corpus) and consistently tied to positive language. It should anchor both product and messaging.
+
+**Quality is an emerging brand risk** — complaints about glue, durability, and early wear appear across *multiple* techniques and sources — a brand-protection issue, not an isolated ops problem.
+
+**Premium icons are under pressure** — product-level sentiment shows **Jordan (−0.50), Air Force 1 (−0.17), and Dunk (−0.14)** trending negative, while **Cortez (+1.0), Metcon (+0.75), and Air Max (+0.67)** lead. Even flagship lines aren't immune.
+
+| Top Themes by Mentions | % of Corpus |
+|------------------------|-------------|
+| Comfort | 14.0% |
+| Design | 12.2% |
+| Quality | 7.7% |
+| Sizing | 6.0% |
+| Pricing | 5.2% |
+| Durability | 4.9% |
+| Sustainability | 1.9% |
+
+---
+
+## 🧭 Strategic Recommendation
+
+> Nike shouldn't get cheaper everywhere or lean only on hype. The winning play: **fix manufacturing & sizing consistency, defend premium lines where emotional equity is strong, improve value delivery on everyday models, and stand up text analytics as a permanent listening system.**
+>
+> *Customers still want to believe in Nike — the opportunity is closing the gap between brand promise and product experience.*
+
+The full report includes a phased roadmap: **Immediate (0–30 days), Short-term (30–90), Brand protection (90–180),** and a dedicated **competitive defense against Adidas.**
+
+---
+
+## 🛠 Methods & Techniques
 
 | Area | Techniques Applied |
 |------|--------------------|
-| **Text preprocessing** | Tokenization, stop-word removal, cleaning, preprocessing decisions |
+| **Text preprocessing** | Tokenization, stop-word removal, cleaning, documented preprocessing decisions |
 | **Frequency analysis** | Word frequency, bigram extraction & visualization, Zipf's Law verification |
-| **Sentiment analysis** | Bing (binary), AFINN (valence), NRC (emotion breakdown), comment-level classification |
-| **Aspect & topic modeling** | Aspect-based sentiment, Latent Dirichlet Allocation (LDA) topic modeling |
+| **Sentiment analysis** | Bing (binary), AFINN (valence), NRC (8-emotion breakdown), comment-level classification |
+| **Aspect & topic modeling** | Aspect-based sentiment, Latent Dirichlet Allocation (LDA) |
 | **Importance weighting** | TF-IDF by product line |
 | **Network analysis** | Keyword co-occurrence network |
-| **Competitive intelligence** | Nike vs. Adidas threat analysis, sustainability analysis |
+| **Competitive intelligence** | Nike vs. Adidas threat & sustainability analysis |
 
-## Key Deliverables
+## 📦 Tech Stack
 
-- **Executive summary** with sentiment distribution, top business themes, and product-line performance tables
-- **Product deep-dive** on the Metcon 10 training shoe
-- **Strategic recommendations roadmap** segmented by time horizon:
-  - Immediate actions (0–30 days)
-  - Short-to-medium term (30–90 days)
-  - Brand & market protection (90–180 days)
-  - Competitive defense against Adidas
-- A transparent **limitations & model validity** section
+**R** · `tidytext` · `dplyr` · `ggplot2` · `topicmodels` · `igraph`/`ggraph` · Bing/AFINN/NRC lexicons · R Markdown → self-contained HTML
 
-## Tech Stack
-
-- **Language:** R
-- **Core libraries:** `tidytext`, `dplyr`, `ggplot2`, `topicmodels`, `igraph`/`ggraph`
-- **Sentiment lexicons:** Bing, AFINN, NRC
-- **Report:** R Markdown → self-contained HTML (Pandoc)
-
-## Repository Contents
+## 📂 Repository Contents
 
 | File | Description |
 |------|-------------|
-| `index.html` | The complete rendered report (interactive, self-contained) |
-| `README.md` | This file |
+| `index.html` | Complete rendered report (interactive, self-contained) |
+| `README.md` | This overview |
+| `LICENSE` | MIT License |
 
-## How to View
+## 👀 How to View
 
 - **Online (recommended):** [valentinedube.github.io/nike-brand-intelligence](https://valentinedube.github.io/nike-brand-intelligence/)
-- **Locally:** download `index.html` and open it in any web browser.
+- **Locally:** download `index.html` and open in any browser.
 
 ---
 
-## Author
+## 👤 Author
 
 **Valentine Dube** — Data & Business Analyst
 📧 valentinedube01@gmail.com · 🔗 [GitHub](https://github.com/ValentineDube)
